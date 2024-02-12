@@ -1,20 +1,12 @@
 resource "azurerm_resource_group" "example" {
-  name     = "TerraformRG"
+  name     = "TerraformRG4"
   location = "West Europe"
 }
 resource "azurerm_resource_group" "example1" {
-  name     = "TerraformRG1"
+  name     = "TerraformRG3"
   location = "West Europe"
 }
 resource "azurerm_resource_group" "example2" {
-  name     = "TerraformRG2"
+  name     = "TerraformRG5"
   location = "West Europe"
-}
-
-resource "azurerm_storage_account" "SA" {
-  name                     = "tarunsa"
-  resource_group_name      = azurerm_resource_group.example1.name
-  location                 = azurerm_resource_group.example1.location
-  account_tier             = "Standard"
-  account_replication_type = "GRS"
 }
